@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Prachi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #ff6961;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff6961;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4d4d;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .memory-item {
+            text-align: center;
+        }
+
+        .memory-item img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        #thankYouMessage {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Homepage -->
+    <div class="container" id="home">
+        <h1>I'm Sorry, Prachi!</h1>
+        <p>Dear Prachi, I'm truly sorry for everything. I never meant to hurt you, and I hope you can forgive me.</p>
+        <button onclick="goToMemories()">Click here to see how much I care</button>
+    </div>
+
+    <!-- Memories Page -->
+    <div class="container hidden" id="memories">
+        <h2>Our Beautiful Memories</h2>
+        <div class="gallery">
+            <div class="memory-item">
+                <img src="image1.jpg" alt="Memory 1">
+                <p>This moment meant the world to me.</p>
+            </div>
+            <div class="memory-item">
+                <img src="image2.jpg" alt="Memory 2">
+                <p>I cherish every smile we shared.</p>
+            </div>
+        </div>
+        <button onclick="goToPromises()">Next: My Promises</button>
+    </div>
+
+    <!-- Promise Page -->
+    <div class="container hidden" id="promises">
+        <h2>My Promise to You</h2>
+        <ul>
+            <li>I promise to always listen.</li>
+            <li>I promise to be more understanding.</li>
+            <li>I promise to make you smile, always.</li>
+        </ul>
+        <button onclick="showThankYou()">Forgive me?</button>
+        <p id="thankYouMessage" class="hidden">Yay! I knew you would forgive me. 😊</p>
+    </div>
+
+    <script>
+        function goToMemories() {
+            document.getElementById("home").classList.add("hidden");
+            document.getElementById("memories").classList.remove("hidden");
+        }
+
+        function goToPromises() {
+            document.getElementById("memories").classList.add("hidden");
+            document.getElementById("promises").classList.remove("hidden");
+        }
+
+        function showThankYou() {
+            document.getElementById("thankYouMessage").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
