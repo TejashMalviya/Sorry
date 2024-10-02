@@ -26,7 +26,7 @@
             border-radius: 20px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1.5s ease;
-            max-width: 500px;
+            max-width: 600px;
             position: relative;
         }
 
@@ -99,7 +99,7 @@
             color: #32CD32;
         }
 
-        /* Cat animations */
+        /* Animation */
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -147,7 +147,7 @@
             }
         }
 
-        /* Star animations */
+        /* Stars animations */
         .stars {
             position: absolute;
             top: 0;
@@ -181,14 +181,6 @@
         .stars span:nth-child(3) { top: 30%; left: 40%; animation-duration: 5s; }
         .stars span:nth-child(4) { top: 50%; left: 70%; animation-duration: 6s; }
         .stars span:nth-child(5) { top: 60%; left: 30%; animation-duration: 7s; }
-
-        /* Cat Image */
-        .cat {
-            margin-top: 20px;
-            width: 100px;
-            height: 100px;
-            animation: bounce 2s infinite;
-        }
     </style>
 </head>
 <body>
@@ -203,23 +195,18 @@
         <div class="heart">❤️</div>
         <h1>I'm Sorry, Prachi!</h1>
         <p>Dear Prachi, I'm truly sorry for everything. I never meant to hurt you, and I hope you can forgive me.</p>
-        <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.png" class="cat" alt="Cat Image">
         <button onclick="goToMemories()">Click here to see how much I care</button>
     </div>
 
     <!-- Memories Page -->
     <div class="container hidden" id="memories">
-        <h2>Our Beautiful Memories</h2>
-        <div class="gallery">
-            <div class="memory-item">
-                <img src="https://cdn.pixabay.com/photo/2016/04/13/21/37/cat-1324054_960_720.jpg" alt="Memory 1">
-                <p>This moment meant the world to me.</p>
-            </div>
-            <div class="memory-item">
-                <img src="https://cdn.pixabay.com/photo/2016/03/28/11/04/cat-1285634_960_720.png" alt="Memory 2">
-                <p>I cherish every smile we shared.</p>
-            </div>
-        </div>
+        <h2>Our Story</h2>
+        <p>
+            Remember 4th September? That day when everyone was talking about a person named Naruto, and no one knew who Naruto was? I jokingly told you that I was Naruto. That was the first time we met.<br><br>
+            I invited you to a hackathon, and we formed a team. We joined many groups, but the vibe never matched, so we left the groups. But one thing stayed constant — our friendship, you and me.<br><br>
+            How can I forget the projections party? We went to the Ritviz concert, ate Chinese food, and shared the payment history. Crazy times, right? And remember that time we made pasta and noodles together? Such a weird combination, but we did it!<br><br>
+            Our daily walks became the most important routine, even if we had exams the next day, because walks meant more to us than anything else.
+        </p>
         <button onclick="goToPromises()">Next: My Promises</button>
     </div>
 
@@ -231,9 +218,8 @@
             <li>I promise to be more understanding.</li>
             <li>I promise to make you smile, always.</li>
         </ul>
-        <img src="https://cdn.pixabay.com/photo/2018/06/04/20/08/cat-3454663_960_720.png" class="cat" alt="Cute Cat">
-        <button onclick="showThankYou()">Forgive me?</button>
-        <p id="thankYouMessage" class="hidden">Yay! I knew you would forgive me. 😊</p>
+        <button onclick="showThankYou()">Please give me a chance</button>
+        <p id="thankYouMessage" class="hidden">Please give me a chance.</p>
     </div>
 
     <script>
